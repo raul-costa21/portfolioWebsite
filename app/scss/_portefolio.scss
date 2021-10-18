@@ -1,0 +1,139 @@
+.portefolio {
+  padding: 0 2rem;
+
+  h2 {
+    margin-bottom: 3rem;
+    align-self: center;
+    padding-top: 1rem;
+
+    @include breakpoint-down(small) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &-slide {
+    position: relative;
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-image {
+    position: relative;
+    .arrow {
+      position: absolute;
+      z-index: 2;
+      background-color: $white;
+      color: $darkBrown;
+      padding: 1rem;
+
+      transition: all 200ms ease-in-out;
+      // Positons of the arrows
+      bottom: 1rem;
+
+      @include breakpoint-down(medium) {
+        bottom: 38%;
+      }
+
+      @include breakpoint-down(small) {
+        padding: 5px;
+        font-size: 15px;
+      }
+
+      &.fa-arrow-left {
+        left: 0.2rem;
+
+        &:hover {
+          background-color: $orange;
+          color: $white;
+        }
+
+        @include breakpoint-down(medium) {
+          left: -4.5rem;
+        }
+        @include breakpoint-down(small) {
+          left: -24px;
+        }
+      }
+
+      &.fa-arrow-right {
+        left: 4rem;
+        &:hover {
+          background-color: $orange;
+          color: $white;
+        }
+
+        @include breakpoint-down(medium) {
+          left: auto;
+          right: -4.5rem;
+        }
+        @include breakpoint-down(small) {
+          right: -24px;
+        }
+      }
+    }
+  }
+
+  img {
+    // images should be 2k resolution
+    height: 80vh;
+    @include breakpoint-down(large) {
+      // for screens < 1439px
+      height: auto;
+      max-width: 80vw;
+    }
+
+    @include breakpoint-down(small) {
+      // for screens < 763px
+    }
+  }
+
+  &-text {
+    background-color: $white;
+
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    width: 50%;
+    padding: 2rem;
+
+    @include breakpoint-down(large) {
+      // for width < 1440px and > 1024px
+      bottom: -2rem;
+      right: -1rem;
+      padding: 1rem;
+    }
+
+    @include breakpoint-down(medium) {
+      // for width < 1023px
+      position: static;
+      width: 100%;
+    }
+
+    @include breakpoint-down(small) {
+    }
+
+    h3 {
+      font-size: $font-lg;
+      color: $darkBrown;
+      padding-bottom: 0.5rem;
+
+      @include breakpoint-down(small) {
+        font-size: $font-med;
+      }
+    }
+
+    p {
+      @include breakpoint-down(large) {
+        // for width < 1440px and > 1024px
+        font-size: $font-sm;
+      }
+    }
+  }
+}
+
+.hide-portfolio-content {
+  display: none;
+}

@@ -1,0 +1,94 @@
+.main {
+  min-height: 100vh;
+  background: url("../../img/beach.jpg");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.384);
+  background-blend-mode: multiply;
+
+  // Navbar
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  // Menu for desktop
+  .menu-desktop {
+    ul {
+      list-style-type: none;
+      padding: 1rem;
+    }
+    li {
+      font-size: $font-sm;
+      &:not(:first-of-type) {
+        margin-left: 1.5rem;
+      }
+
+      &:hover {
+        background-color: $orange;
+        transition: background-color 300ms ease-in-out;
+      }
+    }
+  }
+
+  // Menu for Mobile
+  .menu-mobile {
+    visibility: hidden;
+    opacity: 0;
+
+    background: linear-gradient(180deg, $pastel 0%, $white 100%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-100%);
+    width: 100vw;
+    height: 100vh;
+
+    ul {
+      margin-top: 4rem;
+      list-style-type: none;
+    }
+
+    li {
+      border-bottom: 1px solid $darkBrown;
+      margin-top: 4rem;
+
+      @include breakpoint-down(small) {
+        font-size: $font-med !important;
+      }
+      font-size: $font-lg !important;
+    }
+  }
+
+  .hamburger-bar {
+    margin: 1.5rem auto 0;
+    color: $white;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+
+  // Banner text & info
+  &-msg {
+    font-family: $title-font;
+    color: $white;
+    border-radius: 1%;
+    letter-spacing: 2px;
+
+    > h1 {
+      padding: 1.5rem 0;
+    }
+  }
+
+  &-contacts {
+    margin-top: 1.5rem;
+
+    > :nth-child(2) {
+      padding: 0 0.8rem;
+    }
+
+    i:hover {
+      cursor: pointer;
+    }
+  }
+}

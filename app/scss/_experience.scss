@@ -1,0 +1,80 @@
+#experience {
+  padding: 0 2rem;
+  h2 {
+    margin: 1rem 0 3rem;
+    text-align: center;
+  }
+
+  .experience {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "exp1 exp2 exp3 exp4" "exp5 exp6 exp7 .";
+
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "exp1 exp2" "exp3 exp4" "exp5 exp6" "exp7 .";
+    }
+
+    @include breakpoint-down(small) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "exp1" "exp2" "exp3" "exp4" "exp5" "exp6" "exp7";
+    }
+    &-info {
+      img {
+        width: 30%;
+        border-radius: 5rem;
+        opacity: 0.4;
+
+        @include breakpoint-down(medium) {
+          width: 25%;
+        }
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all 200ms ease-in-out;
+        img {
+          opacity: 1;
+          transition: all 200ms ease-in-out;
+        }
+      }
+      @include breakpoint-down(medium) {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      &-1 {
+        grid-area: exp1;
+      }
+      &-2 {
+        grid-area: exp2;
+      }
+      &-3 {
+        grid-area: exp3;
+      }
+      &-4 {
+        grid-area: exp4;
+      }
+      &-5 {
+        grid-area: exp5;
+      }
+      &-6 {
+        grid-area: exp6;
+      }
+      &-7 {
+        grid-area: exp7;
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My personal website</title>
+    <meta name="author" content="Raul Costa" />
+    <meta name="description" content="My portfolio website, here you will find all of my web development projects, my education and work experience." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Josefin+Slab:ital@1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/app/css/style.css" />
+  </head>
+  <body>
+    <section class="main flex flex-center flex-column-center">
+      <i class="fas fa-bars fa-2x hide-for-desktop hamburger-bar"></i>
+      <nav class="navbar">
+        <div class="menu-desktop hide-for-mobile">
+          <ul class="flex flex-end">
+            <li><a href="#about">About</a></li>
+            <li><a href="#portefolio">Portfolio</a></li>
+            <li><a href="#education">Education and Training</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+          </ul>
+        </div>
+        <div class="menu-mobile hide-for-desktop">
+          <ul class="flex flex-column flex-column-center">
+            <li><a href="#about">About</a></li>
+            <li><a href="#portefolio">Portfolio</a></li>
+            <li><a href="#education">Education and Training</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="main-msg flex flex-column flex-center flex-column-center">
+        <p>Welcome</p>
+        <h1>I'M RAÚL COSTA</h1>
+        <p>Web Developer Wannabe</p>
+        <div class="main-contacts">
+          <i class="fas fa-envelope-open-text fa-2x"></i>
+          <a href="https://github.com/raul-costa21" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://www.linkedin.com/in/raul-costa-5883b9118/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about flex mobile-display container container-mt" id="about">
+      <div class="flex container-pt">
+        <h2>
+          About <br />
+          Me
+        </h2>
+        <div class="separator"></div>
+      </div>
+
+      <p class="container-pt">
+        After become unemployed in 2020 I decided to use the spare time I had to learn how to code. I choose this field because since I was a kid I had (and have) an interest and skill to everything related to computers. In the beginning I didn't know which path to choose since the programing area has many options. I was advised by a senior developer to try web development and so far I am loving it! For me, web development is a combination of style and the design with logic and problem solving.
+      </p>
+    </section>
+
+    <section class="portefolio flex flex-column mobile-display container-mt" id="portefolio">
+      <h2>Portfolio</h2>
+      <div class="portefolio-slide flex">
+        <div class="portefolio-image">
+          <i class="fas fa-2x fa-arrow-left arrow" id="leftArrow"></i>
+          <i class="fas fa-2x fa-arrow-right arrow" id="rightArrow"></i>
+          <a href="https://raul-costa21.github.io/easyBank/" target="_blank">
+            <img src="/img/easyBank.jpg" alt="" />
+          </a>
+        </div>
+        <div class="portefolio-text flex flex-column">
+          <h3>Easy Bank</h3>
+          <p>This project consists in a challenge from the Front-end Mentor website (frontendmentor.io). In it, I use multiple CSS properties like Grid, Flexbox or Animations and combine them all together in different SCSS files. I take advantage of SCSS to create variables, breakpoints and nesting my CSS rules to better control them. This website is totally responsive.</p>
+          <div class="hide-portfolio-content">
+            <h3>Easy Bank</h3>
+            <p>This project consists in a challenge from the Front-end Mentor website (frontendmentor.io). In it, I use multiple CSS properties like Grid, Flexbox or Animations and combine them all together in different SCSS files. I take advantage of SCSS to create variables, breakpoints and nesting my CSS rules to better control them. This website is totally responsive.</p>
+            <a href="https://raul-costa21.github.io/easyBank/" target="_blank"></a>
+            <h3>Bkend Blog</h3>
+            <p>This project was created to test my back-end developer skills. Using NodeJS with the Express framework I develop this server with different routes and post requests handlers. This blog uses EJS, stores the data created in a MongoDB database (native module no Mongoose) and can register users in a MailChimp audience. The blog posts in it inform us more about how the website was made.</p>
+            <a href="https://bkend-blog.herokuapp.com/" target="_blank"></a>
+            <h3>React Project</h3>
+            <p>Currently learning React, as soon that I have a project using this JavaScript framework I will display it here.</p>
+            <a href="#portefolio" target="_self"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education flex flex-center mobile-display container container-mt" id="education">
+      <div class="courses">
+        <div class="courses-data">
+          <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank">
+            <h3>Full Stack Web Development</h3>
+            <h4>Udemy</h4>
+            <ul>
+              <li>HTML, CSS, Bootstrap, JavaScript,</li>
+              <li>jQuery, DOM, NodeJS, ExpressJS,</li>
+              <li>API, GIT, EJS, SQL,</li>
+              <li>MongoDB, Deploy Web Application, RESTful API, Authentication and Security...</li>
+            </ul>
+          </a>
+        </div>
+        <div class="courses-data">
+          <a href="https://www.udemy.com/course/javascript-boost/" target="_blank">
+            <h3>JavaScript</h3>
+            <h4>Udemy</h4>
+            <ul>
+              <li>Var, Let, Const, Hoisting,</li>
+              <li>Arrow functions, Map, Set, Symbol,</li>
+              <li>Promise, Async Await, Import Export,</li>
+              <li>Object constructor, Constructor, Class,</li>
+              <li>Stack, Queue, Heap, Event loop, Task Queue...</li>
+            </ul>
+          </a>
+        </div>
+        <div class="courses-data">
+          <h3>Frontend Developer</h3>
+          <h4>IEFP</h4>
+          <ul>
+            <li>Web editing, CSS, Web design,</li>
+            <li>User Interface and User Experience, English.</li>
+          </ul>
+        </div>
+        <div class="courses-data">
+          <a href="https://www.tecminho.uminho.pt/showcourse.php?plan=1&course=4081" target="_blank">
+            <h3>Data Analysis and Visualization with Python</h3>
+            <h4>TecMinho</h4>
+            <ul>
+              <li>Data analysis with NumPy and Pandas,</li>
+              <li>Data visualization with Seaborn and Matplotlib,</li>
+              <li>Web Data Extraction with BeautifulSoup.</li>
+            </ul>
+          </a>
+        </div>
+        <div class="courses-data">
+          <h3>Digital Marketing</h3>
+          <h4>IEFP</h4>
+          <ul>
+            <li>Marketing Planning, SEO, Social Media Management,</li>
+            <li>Advertisement, Creativity in Communication.</li>
+          </ul>
+        </div>
+        <div class="courses-data">
+          <a href="https://www.ics.uminho.pt/pt/Ensino/Mestrados/Crime-Diferenca-Desigualdade" target="_blank">
+            <h3>Crime, Difference and Inequality</h3>
+            <h4>Universidade do Minho</h4>
+            <ul>
+              <li>Criminal Law Topics, Social Studies of Crime,</li>
+              <li>Crime Psychology, Justice and Social Rehabilitation.</li>
+            </ul>
+          </a>
+        </div>
+        <div class="courses-data">
+          <a href="https://www.ics.uminho.pt/pt/Estudar/Licenciaturas/Sociologia" target="_blank">
+            <h3>Sociology</h3>
+            <h4>Universidade do Minho</h4>
+            <ul>
+              <li>Methodology for the Social Sciences, Statistics for Sociology,</li>
+              <li>Sociological Theories, Sociology of Politics,</li>
+              <li>Sociology of Organizations, Social Psychology</li>
+            </ul>
+          </a>
+        </div>
+      </div>
+      <div class="flex education-title">
+        <h2>
+          Education <br />
+          Training
+        </h2>
+      </div>
+    </section>
+
+    <section class="container-mt" id="experience">
+      <h2>Work Experience</h2>
+      <div class="experience">
+        <div class="experience-info experience-info-1">
+          <a href="https://www.linkedin.com/in/raul-costa-5883b9118/" target="_blank">
+            <img src="/img/developer.png" alt="" />
+            <h3>Frontend Developer</h3>
+            <h4>Netgócio</h4>
+            <p>2021 - present</p>
+          </a>
+        </div>
+        <div class="experience-info experience-info-2">
+          <a href="https://www.linkedin.com/in/raul-costa-5883b9118/" target="_blank">
+            <img src="/img/delivery-truck.png" alt="" />
+            <h3>Fleet administrator</h3>
+            <h4>Torrestir</h4>
+            <p>2018-2020</p>
+          </a>
+        </div>
+        <div class="experience-info experience-info-3">
+          <a href="https://www.linkedin.com/in/raul-costa-5883b9118/" target="_blank">
+            <img src="/img/graphic-designer.png" alt="" />
+            <h3>Content Manager</h3>
+            <h4>NKA</h4>
+            <p>2017-2018</p>
+          </a>
+        </div>
+        <div class="experience-info experience-info-4">
+          <a href="https://www.linkedin.com/in/raul-costa-5883b9118/" target="_blank">
+            <img src="/img/shopping.png" alt="" />
+            <h3>Orders Management and Customer Support</h3>
+            <h4>Mellmak</h4>
+            <p>2017</p>
+          </a>
+        </div>
+        <div class="experience-info experience-info-5">
+          <a href="https://www.linkedin.com/in/raul-costa-5883b9118/" target="_blank">
+            <img src="/img/marketing-digital.png" alt="" />
+            <h3>Digital Marketing</h3>
+            <h4>Agência Influência</h4>
+            <p>2017</p>
+          </a>
+        </div>
+        <div class="experience-info experience-info-6">
+          <a href="https://www.linkedin.com/in/raul-costa-5883b9118/" target="_blank">
+            <img src="/img/call-center.png" alt="" />
+            <h3>Customer Service</h3>
+            <h4>Randstad</h4>
+            <p>2016</p>
+          </a>
+        </div>
+        <div class="experience-info experience-info-7">
+          <a href="https://www.linkedin.com/in/raul-costa-5883b9118/" target="_blank">
+            <img src="/img/social-services.png" alt="" />
+            <h3>Internship in Social Services</h3>
+            <h4>Câmara Municipal de Braga</h4>
+            <p>2014</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="container-mt flex flex-center">
+      <p>&copy Raul Costa 2021</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/0b0ad37fd0.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/app/js/index.js" type="module"></script>
+  </body>
+</html>
