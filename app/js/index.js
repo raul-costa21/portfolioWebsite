@@ -95,7 +95,7 @@ let sliderPortfolio = () => {
         elem.addEventListener("animationend", () => {
           elem.classList.remove("fade-out");
           elem.classList.add("fade-in");
-          image.src = `/img/${imagesArray[slideNum]}`;
+          image.src = `img/${imagesArray[slideNum]}`;
           a.href = `${aArray[slideNum].href}`;
           a.target = `${aArray[slideNum].target}`;
           h3.textContent = `${h3Array[slideNum].textContent}`;
