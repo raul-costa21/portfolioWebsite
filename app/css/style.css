@@ -391,6 +391,10 @@ h2 {
   .portefolio-image .arrow.fa-arrow-left {
     left: -24px;
   }
+  .portefolio-image .arrow.fa-arrow-left:hover {
+    background-color: transparent;
+    color: initial;
+  }
 }
 
 .portefolio-image .arrow.fa-arrow-right {
@@ -412,6 +416,10 @@ h2 {
 @media (max-width: 47.9375em) {
   .portefolio-image .arrow.fa-arrow-right {
     right: -24px;
+  }
+  .portefolio-image .arrow.fa-arrow-right:hover {
+    background-color: transparent;
+    color: initial;
   }
 }
 
