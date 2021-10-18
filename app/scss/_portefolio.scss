@@ -55,6 +55,10 @@
         }
         @include breakpoint-down(small) {
           left: -24px;
+          &:hover {
+            background-color: transparent;
+            color: initial;
+          }
         }
       }
 
@@ -71,6 +75,10 @@
         }
         @include breakpoint-down(small) {
           right: -24px;
+          &:hover {
+            background-color: transparent;
+            color: initial;
+          }
         }
       }
     }
