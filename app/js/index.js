@@ -21,7 +21,7 @@ let slideShow = () => {
   if (main.classList.contains("slideShowIn")) {
     main.classList.remove("slideShowIn");
     main.classList.add("slideShowOut");
-    main.style.backgroundImage = `url(../../img/${images[count]})`;
+    main.style.backgroundImage = `url(img/${images[count]})`;
     count++;
   }
   count = count == 4 ? 0 : count;
