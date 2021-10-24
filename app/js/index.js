@@ -12,14 +12,13 @@ let clickEmail = () => {
 };
 
 // main image(s) animation
-let count = 1;
-let slideShow = () => {
+let slideShow = (images) => {
+  let count = 1;
   let main = document.querySelector(".main");
-  let images = ["beach.jpg", "music.jpg", "game.jpg", "code.jpg"];
 
   main.addEventListener("animationend", () => {
     if (main.classList.contains("slideShowIn")) {
-      main.style.backgroundImage = `url(img/${images[count]})`;
+      main.style.backgroundImage = `url(${images[count].src})`;
       count++;
       count = count == 4 ? 0 : count;
       main.classList.remove("slideShowIn");
@@ -101,9 +100,23 @@ let sliderPortfolio = () => {
   });
 };
 
+let loadImages = () => {
+  let images = ["beach.jpg", "music.jpg", "game.jpg", "code.jpg"];
+  let loadedImages = [];
+
+  images.map((image) => {
+    let img = new Image();
+    img.src = `img/${image}`;
+    loadedImages.push(img);
+  });
+
+  return loadedImages;
+};
+
 window.addEventListener("load", () => {
+  let images = loadImages();
   clickEmail();
   clickHamburgerBar();
-  slideShow();
+  slideShow(images);
   sliderPortfolio();
 });
