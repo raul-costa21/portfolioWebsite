@@ -52,7 +52,7 @@ let clickHamburgerBar = () => {
   });
 };
 
-let sliderPortfolio = () => {
+let sliderPortfolio = (images) => {
   let slideNum = 0;
 
   let rightArrow = document.querySelector(".fa-arrow-right");
@@ -60,7 +60,6 @@ let sliderPortfolio = () => {
   let arrows = [leftArrow, rightArrow];
 
   let image = document.querySelector(".portefolio-image img");
-  let imagesArray = ["easyBank.jpg", "bkendBlog.jpg", "404.jpg"];
 
   let a = document.querySelector(".portefolio-image a");
   let aArray = Array.from(document.querySelectorAll(".hide-portfolio-content a"));
@@ -89,7 +88,7 @@ let sliderPortfolio = () => {
         elem.addEventListener("animationend", () => {
           elem.classList.remove("fade-out");
           elem.classList.add("fade-in");
-          image.src = `img/${imagesArray[slideNum]}`;
+          image.src = `${images[slideNum].src}`;
           a.href = `${aArray[slideNum].href}`;
           a.target = `${aArray[slideNum].target}`;
           h3.textContent = `${h3Array[slideNum].textContent}`;
@@ -101,7 +100,7 @@ let sliderPortfolio = () => {
 };
 
 let loadImages = () => {
-  let images = ["beach.jpg", "music.jpg", "game.jpg", "code.jpg"];
+  let images = ["beach.jpg", "music.jpg", "game.jpg", "code.jpg", "easyBank.jpg", "bkendBlog.jpg", "404.jpg"];
   let loadedImages = [];
 
   images.map((image) => {
@@ -118,5 +117,5 @@ window.addEventListener("load", () => {
   clickEmail();
   clickHamburgerBar();
   slideShow(images);
-  sliderPortfolio();
+  sliderPortfolio(images.slice(4));
 });
