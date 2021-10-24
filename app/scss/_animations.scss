@@ -9,7 +9,7 @@
 }
 
 .slideShowIn {
-  animation: slideAnimationIn 3500ms ease-in-out forwards;
+  animation: slideAnimationIn 2000ms ease-in-out forwards;
 }
 
 @keyframes slideAnimationOut {
@@ -22,7 +22,7 @@
 }
 
 .slideShowOut {
-  animation: slideAnimationOut 3000ms ease-in-out forwards;
+  animation: slideAnimationOut 4000ms ease-in-out forwards;
 }
 
 // animations hamburger menu
