@@ -3,28 +3,27 @@
   from {
     box-shadow: none;
   }
-  to{
+  to {
     box-shadow: white 0 0 0 5rem inset;
   }
 }
 
 .slideShowIn {
-  animation: slideAnimationIn 2000ms ease-in-out forwards;
+  animation: slideAnimationIn 3500ms ease-in-out forwards;
 }
 
 @keyframes slideAnimationOut {
   from {
     box-shadow: white 0 0 0 5rem inset;
   }
-  to{
+  to {
     box-shadow: none;
   }
 }
 
 .slideShowOut {
-  animation: slideAnimationOut 2000ms ease-in-out forwards;
+  animation: slideAnimationOut 3000ms ease-in-out forwards;
 }
-
 
 // animations hamburger menu
 @keyframes fade-in {

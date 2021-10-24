@@ -264,7 +264,7 @@ h2 {
 }
 
 .slideShowIn {
-  animation: slideAnimationIn 2000ms ease-in-out forwards;
+  animation: slideAnimationIn 3500ms ease-in-out forwards;
 }
 
 @keyframes slideAnimationOut {
@@ -277,7 +277,7 @@ h2 {
 }
 
 .slideShowOut {
-  animation: slideAnimationOut 2000ms ease-in-out forwards;
+  animation: slideAnimationOut 3000ms ease-in-out forwards;
 }
 
 @keyframes fade-in {
@@ -655,6 +655,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "exp1 exp2 exp3 exp4" "exp5 exp6 exp7 .";
+  row-gap: 2rem;
 }
 
 @media (max-width: 63.9375em) {

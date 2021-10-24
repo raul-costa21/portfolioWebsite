@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "exp1 exp2 exp3 exp4" "exp5 exp6 exp7 .";
+    row-gap: 2rem;
 
     @include breakpoint-down(medium) {
       grid-template-columns: repeat(2, 1fr);

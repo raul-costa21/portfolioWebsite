@@ -17,23 +17,18 @@ let slideShow = () => {
   let main = document.querySelector(".main");
   let images = ["beach.jpg", "music.jpg", "game.jpg", "code.jpg"];
 
-  // this change the image and also controls the transition animation
-  if (main.classList.contains("slideShowIn")) {
-    main.classList.remove("slideShowIn");
-    main.classList.add("slideShowOut");
-    main.style.backgroundImage = `url(img/${images[count]})`;
-    count++;
-  }
-  count = count == 4 ? 0 : count;
-
-  // this functions controls the transition animation and then calls the parent function;
-  let transitionAnime = () => {
-    main.classList.remove("slideShowOut");
-    main.classList.add("slideShowIn");
-    setTimeout(slideShow, 2000);
-  };
-
-  setTimeout(transitionAnime, 5000);
+  main.addEventListener("animationend", () => {
+    if (main.classList.contains("slideShowIn")) {
+      main.style.backgroundImage = `url(img/${images[count]})`;
+      count++;
+      count = count == 4 ? 0 : count;
+      main.classList.remove("slideShowIn");
+      main.classList.add("slideShowOut");
+    } else {
+      main.classList.add("slideShowIn");
+      main.classList.remove("slideShowOut");
+    }
+  });
 };
 
 // click to show nav bar menu
